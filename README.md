@@ -71,7 +71,7 @@ Once all the prerequisites are installed, we start to initialize the application
 
 1. Clone the repo
    ```sh
-   git clonehttps://github.com/darioravello89/enviame.git
+   git clone https://github.com/darioravello89/enviame.git
    ```
 2. Install NPM packages
    ```sh
