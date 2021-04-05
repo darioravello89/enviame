@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/app.js",
   "scripts": {
-    "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
+    "prebuild": "npm install && tslint -c tslint.json -p tsconfig.json --fix",
     "build": "tsc",
     "prestart": "npm run build && npx prisma generate && npx prisma db push --accept-data-loss --preview-feature && npx prisma db seed --preview-feature",
     "start": "node .",
@@ -23,6 +23,7 @@
     "method-override": "^3.0.0",
     "mysql": "^2.18.1",
     "reflect-metadata": "^0.1.13",
+    "tsc": "^1.20150623.0",
     "typedi": "^0.10.0",
     "winston": "^3.3.3"
   },

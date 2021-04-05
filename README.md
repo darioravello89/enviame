@@ -81,32 +81,17 @@ Once all the prerequisites are installed, we start to initialize the application
 
 <!-- USAGE EXAMPLES -->
 ## 3 Docker Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+ 
+After having everything installed run the following commands to raise the dockers
 
   ```sh
   docker-compose -p "enviame" up
   docker run -d -P --name="enviame"
   ```
-  
-  Util commands
-  ```sh
-  docker build -t darioravello/docker-node-enviame .
-  docker run -it -p 3000:3000 --name enviame-backend-server darioravello/docker-node-enviame
-  docker ps (status)
-  docker images 
-  ```
+    
+## 4 Arquitecture
 
-<!-- USAGE EXAMPLES -->
-## 4 Docker Usage
-
-
-
-## 5 Arquitecture
-
-### 5.1 Node Express Architecture
+### 4.1 Node Express Architecture
 
 ```bash
 src/
@@ -131,7 +116,7 @@ app.ts                     # App entry point
 ```
 
 <!-- USAGE EXAMPLES -->
-## 6 SQL Excersise
+## 5 SQL Excersise
  ```sql
 UPDATE employees emp
 JOIN countries co ON co.id = emp.country_id
@@ -139,4 +124,16 @@ JOIN continents c ON c.id = co.continent_id
 SET emp.salary = emp.salary + (
 	emp.salary * c.anual_adjustment / 100.0
 )
+  ```
+
+
+  
+  Util commands
+  ```sh
+  docker build -t darioravello/docker-node-enviame .
+  docker run -it -p 3000:3000 --name enviame-backend-server darioravello/docker-node-enviame
+  docker ps (status)
+  docker images 
+  
+  docker-compose up --build
   ```
