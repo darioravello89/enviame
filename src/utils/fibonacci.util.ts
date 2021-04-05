@@ -19,20 +19,20 @@ export function getFibonaccisSerie() {
 function getDivisorsCount(n: any){
 
     let numDivisors = 1;
-    let factor = 2; 
- 
+    let factor = 2;
+
     while (factor * factor <= n) {
         if (n % factor === 0) {
             let exponent = 0;
             do {
                 n /= factor;
                 exponent++;
-            } while (n % factor === 0) 
+            } while (n % factor === 0)
             numDivisors *= exponent + 1;
         }
         factor = factor === 2 ? 3 : factor + 2
     }
- 
+
     if (n > 1) {
         numDivisors *= 2;
     }
