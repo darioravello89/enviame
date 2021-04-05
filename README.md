@@ -1,17 +1,7 @@
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
-
-<!-- PROJECT LOGO -->
 <br />
 <p align="center">
   <a href="https://github.com/darioravello89/enviame">
-    <img src="logo.png" alt="Logo" width="80" height="80">
+    <img src="logo.png" alt="Logo" width="260" height="80">
   </a>
 
   <h3 align="center"><a href="https://github.com/darioravello89/enviame">Enviame</a></h3>
@@ -76,22 +66,18 @@ This is an example of how to list things you need to use the software and how to
 
 ### Installation
 
+Once all the prerequisites are installed, we start to initialize the application.
+
 1. Get a free API Key at [https://example.com](https://example.com)
 2. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clonehttps://github.com/darioravello89/enviame.git
    ```
 3. Install NPM packages
    ```sh
    npm install
-   ```
-4. Enter your API in `config.js`
-   ```JS
-   const API_KEY = 'ENTER YOUR API';
-   ```
-
-
-
+   ``` 
+   
 <!-- USAGE EXAMPLES -->
 ## Usage
 
@@ -110,10 +96,13 @@ _For more examples, please refer to the [Documentation](https://example.com)_
   ```
 
   
-
+<!-- USAGE EXAMPLES -->
+## SQL Excersise
+ ```sql
 UPDATE employees emp
 JOIN countries co ON co.id = emp.country_id
 JOIN continents c ON c.id = co.continent_id
 SET emp.salary = emp.salary + (
 	emp.salary * c.anual_adjustment / 100.0
 )
+  ```

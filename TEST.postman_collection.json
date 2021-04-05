@@ -1,0 +1,214 @@
+{
+	"info": {
+		"_postman_id": "8eda4fe8-6c7e-4e1b-bbfb-dd58ddd91a57",
+		"name": "TEST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Crear envio",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "api-key",
+						"value": "ea670047974b650bbcba5dd759baf1ed"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"shipping_order\": {\n        \"n_packages\": \"1\",\n        \"content_description\": \"ORDEN 255826267\",\n        \"imported_id\": \"255826267\",\n        \"order_price\": \"24509.0\",\n        \"weight\": \"0.98\",\n        \"volume\": \"1.0\",\n        \"type\": \"delivery\"\n    },\n    \"shipping_origin\": {\n        \"warehouse_code\": \"401\"\n    },\n    \"shipping_destination\": {\n        \"customer\": {\n            \"name\": \"Bernardita Tapia Riquelme\",\n            \"email\": \"b.tapia@outlook.com\",\n            \"phone\": \"977623070\"\n        },\n        \"delivery_address\": {\n            \"home_address\": {\n                \"place\": \"Puente Alto\",\n                \"full_address\": \"SAN HUGO 01324, Puente Alto, Puente Alto\"\n            }\n        }\n    },\n    \"carrier\": {\n        \"carrier_code\": \"1\",\n        \"tracking_number\": \"1\"\n    }\n}"
+				},
+				"url": {
+					"raw": "{{BASEURL}}companies/401/deliveries",
+					"host": [
+						"{{BASEURL}}companies"
+					],
+					"path": [
+						"401",
+						"deliveries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "companies/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASEURL}}companies/",
+					"host": [
+						"{{BASEURL}}companies"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "plaindromes/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"MinSubstringLength\": 4,\r\n    \"Text\": \"afoolishconsistencyisthehobgoblinoflittlemindsadoredbylittlestatesmenandphilosophersanddivineswithconsistencyagreatsoulhassimplynothingtodohemayaswellconcernhimselfwithhisshadowonthewallspeakwhatyouthinknowinhardwordsandtomorrowspeakwhattomorrowthinksinhardwordsagainthoughitcontradicteverythingyousaidtodayahsoyoushallbesuretobemisunderstoodisitsobadthentobemisunderstoodpythagoraswasmisunderstoodandsocratesandjesusandlutherandcopernicusandgalileoandnewtonandeverypureandwisespiritthatevertookfleshtobegreatistobemisunderstood\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASEURL}}palindrome/",
+					"host": [
+						"{{BASEURL}}palindrome"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fibonacci/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASEURL}}fibonacci/",
+					"host": [
+						"{{BASEURL}}fibonacci"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "companies/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASEURL}}companies/1",
+					"host": [
+						"{{BASEURL}}companies"
+					],
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "companies/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Name\": \"TEST\",\r\n  \"Address\": \"TEST 123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASEURL}}companies/",
+					"host": [
+						"{{BASEURL}}companies"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "companies/",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Name\": \"TESTXXX\",\r\n  \"Address\": \"TEST 123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASEURL}}companies/32",
+					"host": [
+						"{{BASEURL}}companies"
+					],
+					"path": [
+						"32"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "companies/",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASEURL}}companies/32",
+					"host": [
+						"{{BASEURL}}companies"
+					],
+					"path": [
+						"32"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
