@@ -30,20 +30,18 @@
 </details>
 
 
-## About The Test
+## 1 About The Test
 
-There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+1. Ejercicio 1: Docker
+2. Ejercicio 2: API REST + CRUD
+3. Ejercicio 3: Análisis + Desarrollo
+4. Ejercicio 4: Consumo API Envíame para la creación de un envío
+5. Ejercicio 5: Análisis + Desarrollo
+5. Ejercicio 6: Análisis + Desarrollo Aplicado a Negocio
+5. Ejercicio 7: SQL
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should element DRY principles to the rest of your life :smile:
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have have contributed to expanding this template!
-
-A list of commonly used resources that I find helpful are listed in the acknowledgements.
-
-### Built With
+### 1.1 Built With
 
 * [Docker](https://docker.com)
 * [Nodejs](https://nodejs.org)
@@ -52,19 +50,22 @@ A list of commonly used resources that I find helpful are listed in the acknowle
 
 
 <!-- GETTING STARTED -->
-## Getting Started
+## 2 Getting Started
 
 This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
+### 2.1 Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
 * [Docker for Windows](https://desktop.docker.com/win/stable/Docker%20Desktop%20Installer.exe)
 * [Nodejs for Windows](https://nodejs.org/dist/v14.16.0/node-v14.16.0-x64.msi)
 * [Git for Windows](https://git-scm.com/download/win)
 
-### Installation
+Important: You need to activate the window feature Hyper-V
+
+
+### 2.2 Installation
 
 Once all the prerequisites are installed, we start to initialize the application.
 
@@ -77,27 +78,60 @@ Once all the prerequisites are installed, we start to initialize the application
    ```sh
    npm install
    ``` 
-   
+
 <!-- USAGE EXAMPLES -->
-## Usage
+## 3 Docker Usage
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
   ```sh
+  docker-compose -p "enviame" up
+  docker run -d -P --name="enviame"
+  ```
+  
+  Util commands
+  ```sh
   docker build -t darioravello/docker-node-enviame .
   docker run -it -p 3000:3000 --name enviame-backend-server darioravello/docker-node-enviame
   docker ps (status)
   docker images 
-
-  docker-compose -p "my-app" up
-  docker run -d -P --name="n"
   ```
 
-  
 <!-- USAGE EXAMPLES -->
-## SQL Excersise
+## 4 Docker Usage
+
+
+
+## 5 Arquitecture
+
+### 5.1 Node Express Architecture
+
+```bash
+src/
+| 
+|– api/                    # Controller layer: Api routes
+|  |– controllers/         # Controllers after the route layer
+|  |– interfaces/          # All the interfaces 
+|  |– middlewares/         # Operations that check or maniuplate request prior to controller utilizing
+|  |– routes/              # Express routes that define API structure
+|  |– validations/         # All the celebrate validations of payloads
+|- config/                 # Config settings, env variables
+|– jobs/                   # Jobs definitions for node-cron
+|– loaders/                # Split the startup process into modules
+|– services/               # Service layer: Encapsulates all business logic
+|– models/                 # Data access layer: database models 
+|– subscribers/            # Async event handlers
+|– types/                  # Type declaration files (d.ts) for Typescript
+|– utils/                  # All the tool of the project
+test/                      # Test suites
+app.ts                     # App entry point
+...
+```
+
+<!-- USAGE EXAMPLES -->
+## 6 SQL Excersise
  ```sql
 UPDATE employees emp
 JOIN countries co ON co.id = emp.country_id
