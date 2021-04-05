@@ -1,0 +1,43 @@
+datasource db {
+    provider             = "mysql"
+    url                  = env("DATABASE_URL")
+    shadowDatabaseUrl    = env("SHADOW_DATABASE_URL")
+}
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+model Company {
+    ID_Company         Int          @id @default(autoincrement())
+    Name               String?
+    Address            String?
+
+    Deleted            Boolean      @default(false)
+    Insert_Date        DateTime?
+    Insert_User        String?
+    Update_Date        DateTime?
+    Update_User        String?
+}
+
+model ShippingOrder {
+    ID_ShippingOrder          Int          @id @default(autoincrement())
+    n_packages                String?
+    content_description       String?
+    imported_id               String?
+    order_price               String?
+    weight                    String?
+    volume                    String?
+    type                      String?
+    ID_CustomerDestination    Int 
+    ID_AddressCustomer        Int 
+    ID_ShippingOrigin         Int 
+    ID_Carrier                Int 
+    Carrier_TrakingNumber     String 
+
+    Deleted                   Boolean      @default(false)
+    Insert_Date               DateTime?
+    Insert_User               String?
+    Update_Date               DateTime?
+    Update_User               String?
+}

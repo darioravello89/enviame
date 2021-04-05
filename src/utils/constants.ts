@@ -1,0 +1,1 @@
+export const TEMPORARY_USER_DEFAULT = 'sysadmin';

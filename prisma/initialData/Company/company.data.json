@@ -1,0 +1,157 @@
+[
+    {
+        "ID_Company": 1,
+        "Name": "Blue Express",
+        "Address": "Fake Street 123"
+    },
+    {
+        "ID_Company": 2,
+        "Name": "Correos Chile",
+        "Address": "Fake Street 123"
+    },
+    {
+        "ID_Company": 3,
+        "Name": "Chile Express",
+        "Address": "Fake Street 123"
+    },
+    {
+        "ID_Company": 4,
+        "Name": "Starken",
+        "Address": "Fake Street 123"
+    },
+    {
+        "ID_Company": 5,
+        "Name": "Chile Post",
+        "Address": "Fake Street 123"
+    },
+    {
+        "ID_Company": 6,
+        "Name": "Boosmap",
+        "Address": "Fake Street 123"
+    },
+    {
+        "ID_Company": 7,
+        "Name": "99 Minutos",
+        "Address": "Fake Street 123"
+    },
+    {
+        "ID_Company": 8,
+        "Name": "Urbano",
+        "Address": "Fake Street 123"
+    },
+    {
+        "ID_Company": 9,
+        "Name": "Beetrack",
+        "Address": "Fake Street 123"
+    },
+    {
+        "ID_Company": 10,
+        "Name": "WSP Express",
+        "Address": "Fake Street 123"
+    },
+    {
+        "ID_Company": 11,
+        "Name": "Shippify",
+        "Address": "Fake Street 123"
+    },
+    {
+        "ID_Company": 12,
+        "Name": "Motocity",
+        "Address": "Fake Street 123"
+    },
+    {
+        "ID_Company": 13,
+        "Name": "E-Mov",
+        "Address": "Fake Street 123"
+    },
+    {
+        "ID_Company": 14,
+        "Name": "Esameday",
+        "Address": "Fake Street 123"
+    },
+    {
+        "ID_Company": 15,
+        "Name": "FedEx",
+        "Address": "Fake Street 123"
+    },
+    {
+        "ID_Company": 16,
+        "Name": "Globalcourier",
+        "Address": "Fake Street 123"
+    },
+    {
+        "ID_Company": 17,
+        "Name": "Moova",
+        "Address": "Fake Street 123"
+    },
+    {
+        "ID_Company": 18,
+        "Name": "Paquery",
+        "Address": "Fake Street 123"
+    },
+    {
+        "ID_Company": 19,
+        "Name": "PDQ",
+        "Address": "Fake Street 123"
+    },
+    {
+        "ID_Company": 20,
+        "Name": "Pedidos Ya",
+        "Address": "Fake Street 123"
+    },
+    {
+        "ID_Company": 21,
+        "Name": "Pickup Point",
+        "Address": "Fake Street 123"
+    },
+    {
+        "ID_Company": 22,
+        "Name": "Pullman",
+        "Address": "Fake Street 123"
+    },
+    {
+        "ID_Company": 23,
+        "Name": "Samex",
+        "Address": "Fake Street 123"
+    },
+    {
+        "ID_Company": 24,
+        "Name": "SimpliRoute",
+        "Address": "Fake Street 123"
+    },
+    {
+        "ID_Company": 25,
+        "Name": "Speedy Man",
+        "Address": "Fake Street 123"
+    },
+    {
+        "ID_Company": 26,
+        "Name": "Spread",
+        "Address": "Fake Street 123"
+    },
+    {
+        "ID_Company": 27,
+        "Name": "Spress",
+        "Address": "Fake Street 123"
+    },
+    {
+        "ID_Company": 28,
+        "Name": "Transvip",
+        "Address": "Fake Street 123"
+    },
+    {
+        "ID_Company": 29,
+        "Name": "Delpa",
+        "Address": "Fake Street 123"
+    },
+    {
+        "ID_Company": 30,
+        "Name": "Welivery",
+        "Address": "Fake Street 123"
+    },
+    {
+        "ID_Company": 31,
+        "Name": "EsPura",
+        "Address": "Fake Street 123"
+    }
+]
