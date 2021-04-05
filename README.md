@@ -85,25 +85,21 @@ After having everything installed run the following commands to raise the docker
 
 1. Run locally the app
    ```sh
-   npm run start
-   ``` 
-2. Run locally the app
-   ```sh
    docker-compose -p "enviame" up
    ``` 
-3. For stop (optional)
+2. For stop (optional)
    ```sh
    docker-compose down
    ``` 
-4. Delete all containers (optional)
+3. Delete all containers (optional)
    ```sh
     docker rm -f $(docker ps -a -q)
    ``` 
-5. Delete all volumes (optional)
+4. Delete all volumes (optional)
    ```sh
     docker volume rm $(docker volume ls -q)
    ``` 
-6. Restart the containers (optional)
+5. Restart the containers (optional)
    ```sh
     docker-compose up -d
    ``` 
