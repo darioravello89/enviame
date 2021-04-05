@@ -1,7 +1,8 @@
 datasource db {
+    //TODO: Hide and be secure the connection string
     provider             = "mysql"
-    url                  = env("DATABASE_URL")
-    shadowDatabaseUrl    = env("SHADOW_DATABASE_URL")
+    url                  = "mysql://enviame:enviamepass@mysql:3306/enviame_db"
+    shadowDatabaseUrl    = "mysql://enviame:enviamepass@mysql:3306/mysql"
 }
 
 generator client {

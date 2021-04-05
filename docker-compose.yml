@@ -1,23 +1,6 @@
 version: '3.4'
 
 services:
-  nodejs:
-    build: 
-      context: .
-    image: darioravello/node-backend-enviame
-    networks:
-      - frontend
-      - backend
-    environment:
-      - MYSQL_HOST=mysql
-      - MYSQL_USER=enviame
-      - MYSQL_PASS=enviamepass
-      - MYSQL_DB=enviame_db
-    volumes:
-      - ./www/:/var/www/html/
-    ports:
-      - "3000:3000"
-    container_name: node-backend
   mysql:
     image: mysql:5.7
     networks:
@@ -42,6 +25,23 @@ services:
     volumes:
       - /sessions
     container_name: phpmyadmin
+  nodejs:
+    build: 
+      context: .
+    image: darioravello/node-backend-enviame
+    networks:
+      - frontend
+      - backend
+    environment:
+      - MYSQL_HOST=mysql
+      - MYSQL_USER=enviame
+      - MYSQL_PASS=enviamepass
+      - MYSQL_DB=enviame_db
+    volumes:
+      - ./www/:/var/www/html/
+    ports:
+      - "3000:3000"
+    container_name: node-backend
 networks:
   frontend:
   backend:

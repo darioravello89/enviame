@@ -69,12 +69,11 @@ Important: You need to activate the window feature Hyper-V
 
 Once all the prerequisites are installed, we start to initialize the application.
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
    git clonehttps://github.com/darioravello89/enviame.git
    ```
-3. Install NPM packages
+2. Install NPM packages
    ```sh
    npm install
    ``` 
@@ -84,14 +83,37 @@ Once all the prerequisites are installed, we start to initialize the application
  
 After having everything installed run the following commands to raise the dockers
 
-  ```sh
-  docker-compose -p "enviame" up
-  docker run -d -P --name="enviame"
-  ```
-    
-## 4 Arquitecture
+1. Run locally the app
+   ```sh
+   npm run start
+   ``` 
+2. Run locally the app
+   ```sh
+   docker-compose -p "enviame" up
+   ``` 
+3. For stop (optional)
+   ```sh
+   docker-compose down
+   ``` 
+4. Delete all containers (optional)
+   ```sh
+    docker rm -f $(docker ps -a -q)
+   ``` 
+5. Delete all volumes (optional)
+   ```sh
+    docker volume rm $(docker volume ls -q)
+   ``` 
+6. Restart the containers (optional)
+   ```sh
+    docker-compose up -d
+   ``` 
+## 4 Postman collection
+Download the postman collection and import it for run all the requests.
+  * [Postman collection](https://github.com/darioravello89/enviame/blob/main/TEST.postman_collection.json)
 
-### 4.1 Node Express Architecture
+## 5 Arquitecture
+
+### 5.1 Node Express Architecture
 
 ```bash
 src/
@@ -116,7 +138,7 @@ app.ts                     # App entry point
 ```
 
 <!-- USAGE EXAMPLES -->
-## 5 SQL Excersise
+## 6 SQL Excersise
  ```sql
 UPDATE employees emp
 JOIN countries co ON co.id = emp.country_id
@@ -124,16 +146,4 @@ JOIN continents c ON c.id = co.continent_id
 SET emp.salary = emp.salary + (
 	emp.salary * c.anual_adjustment / 100.0
 )
-  ```
-
-
-  
-  Util commands
-  ```sh
-  docker build -t darioravello/docker-node-enviame .
-  docker run -it -p 3000:3000 --name enviame-backend-server darioravello/docker-node-enviame
-  docker ps (status)
-  docker images 
-  
-  docker-compose up --build
   ```
